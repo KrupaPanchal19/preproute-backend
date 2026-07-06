@@ -156,8 +156,8 @@ app.post('/auth/login', (req: Request, res: Response) => {
   }
 
   // Simple mock credentials
-  if (userId === 'admin' && password === 'password123') {
-    const user = { userId: 'admin', role: 'creator' };
+  if (userId === 'vedant-admin' && password === 'vedant123') {
+    const user = { userId: 'vedant-admin', role: 'creator' };
     const token = jwt.sign(user, JWT_SECRET, { expiresIn: '24h' });
     return res.json({
       success: true,
